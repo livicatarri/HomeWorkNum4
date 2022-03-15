@@ -1,0 +1,142 @@
+.login-hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-hero__container {
+  background-image: url(./img/bg.png);
+  width: 1600px;
+  height: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-hero__card {
+  width: 920px;
+  height: 920px;
+  background: #B2DDFA;
+  border: 1px solid #5D9FC6;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: inset 0px 0px 36px rgba(4, 42, 67, 0.02);
+          box-shadow: inset 0px 0px 36px rgba(4, 42, 67, 0.02);
+  border-radius: 68px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login-hero__table {
+  padding: 108px 186px;
+}
+
+.login-hero__title {
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 65px;
+  color: #39454D;
+  margin-bottom: 4px;
+}
+
+.login-hero__descr {
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 35px;
+  color: #303940;
+  margin-bottom: 48px;
+}
+
+.login-hero__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.login-hero__input {
+  width: 548px;
+  height: 88px;
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  background: #FFFFFF;
+  border: 3px solid #5D9FC6;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 16px;
+  color: #303940;
+  padding-left: 28px;
+  margin-bottom: 8px;
+}
+
+.login-hero__require {
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  margin-bottom: 8px;
+  color: #303940 !important;
+}
+
+.login-hero__label {
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  margin-bottom: 8px;
+  color: #303940;
+}
+
+.mb-40 {
+  margin-top: 40px;
+  margin-bottom: 44px;
+}
+
+.login-hero__btn {
+  padding: 32px 145px;
+  width: 548px;
+  height: 97px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.02)), to(rgba(255, 255, 255, 0))), #397A96;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0) 100%), #397A96;
+  -webkit-box-shadow: 0px 8px 2px rgba(20, 42, 52, 0.8);
+          box-shadow: 0px 8px 2px rgba(20, 42, 52, 0.8);
+  border-radius: 20px;
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 33px;
+  color: #E6F7FF;
+}
+/*# sourceMappingURL=login-hero.component.css.map */

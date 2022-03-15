@@ -23,6 +23,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatButtonModule} from '@angular/material/button';
 import { FileSizePipePipe } from './file-size-pipe.pipe';
+import { LoginModule } from './login/login.module';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { FileSizePipePipe } from './file-size-pipe.pipe';
     MatMenuModule,
     MatButtonToggleModule,
     MatButtonModule,
+    LoginModule,
     
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
@@ -56,6 +58,7 @@ import { FileSizePipePipe } from './file-size-pipe.pipe';
     MessagesComponent,
     HeroSearchComponent,
     FileSizePipePipe,
+    
     
   ],
   bootstrap: [ AppComponent ]

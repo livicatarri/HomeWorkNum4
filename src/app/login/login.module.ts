@@ -10,6 +10,10 @@ import { LoginHeroComponent } from './login-hero/login-hero.component';
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports:[ LoginHeroComponent]
+
 })
-export class LoginModule { }
+export class LoginModule { 
+
+}
