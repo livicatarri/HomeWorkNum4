@@ -64,6 +64,7 @@
   font-weight: 600;
   font-size: 26px;
   line-height: 35px;
+  text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
   color: #303940;
   margin-bottom: 48px;
 }
