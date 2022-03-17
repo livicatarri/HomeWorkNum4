@@ -25,6 +25,10 @@ import {MatButtonModule} from '@angular/material/button';
 import { FileSizePipePipe } from './file-size-pipe.pipe';
 import { LoginModule } from './login/login.module';
 
+import { BookModule } from './book/book.module';
+//import { BookRoutingModule } from './book/book-routing.module';
+
+
 
 @NgModule({
   imports: [
@@ -42,6 +46,8 @@ import { LoginModule } from './login/login.module';
     MatButtonToggleModule,
     MatButtonModule,
     LoginModule,
+    BookModule,
+    //BookRoutingModule,
     
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
@@ -57,9 +63,7 @@ import { LoginModule } from './login/login.module';
     HeroDetailComponent,
     MessagesComponent,
     HeroSearchComponent,
-    FileSizePipePipe,
-    
-    
+    FileSizePipePipe,    
   ],
   bootstrap: [ AppComponent ]
 })

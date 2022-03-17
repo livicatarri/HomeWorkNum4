@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,iBAAiB,CAAA;EACb,eAAe,EAAE,IAAI;CACxB",
+    "sources": [
+        "paginator-terminator.component.scss"
+    ],
+    "names": [],
+    "file": "paginator-terminator.component.css"
+}
