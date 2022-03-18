@@ -1,3 +1,49 @@
-.pagination__list{
-    list-style-type: none;
-}
+.pagination {
+    height: 184px;
+    box-sizing: border-box;
+    margin: 27px auto 24px;
+    max-width: 843px;
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pagination-list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+  .pagination-list__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    width: 28px;
+    height: 28px;
+  }
+  
+  .pagination-list__item:hover {
+    background-color: #f2f2f2;
+    border-radius: 50%;
+  }
+  
+  .pagination-list__item_active {
+    background-color: #8f07cf;
+    border-radius: 50%;
+    color: white;
+  }
+  
+  .pagination-list__item:hover {
+    background-color: #8f07cf;
+    opacity: 0.7;
+  }
+  ul{
+list-style-type: none;
+display: flex;
+  }
+ 
