@@ -9,6 +9,8 @@ import { PageFourComponent } from './page-four/page-four.component';
 import { PageFiveComponent } from './page-five/page-five.component';
 import { BookRoutingModule } from './book-routing.module';
 import { PaginatorTerminatorComponent } from './paginator-terminator/paginator-terminator.component';
+import { TableBooksComponent } from './table-books/table-books.component';
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -20,11 +22,15 @@ import { PaginatorTerminatorComponent } from './paginator-terminator/paginator-t
     PageThirdComponent,
     PageFourComponent,
     PageFiveComponent,
-    PaginatorTerminatorComponent
+    PaginatorTerminatorComponent,
+    TableBooksComponent, 
+    
+    
   ],
   imports: [
     CommonModule,
-    BookRoutingModule
+    BookRoutingModule,
+    MatTableModule
   ],
   exports: [
     /*HeaderComponent,

@@ -1,4 +1,4 @@
-.pageFour {
+.pageBook {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0 auto;
@@ -6,9 +6,10 @@
   min-height: 483px;
   width: 100%;
   padding-top: 24px;
+  font-family: "Segoe UI", sans-serif;
 }
 
-.pageSecond__container {
+.pageBook__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,15 +29,12 @@
       align-content: center;
 }
 
-.pageSecond__img {
+.pageBook__img {
   width: 238px;
   height: 216px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #e2e2e2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -47,9 +45,11 @@
   display: inline-block;
   margin-right: 24px;
   margin-bottom: 24px;
+  text-align: center;
+  vertical-align: middle;
 }
 
-.pageSecond__wrapper {
+.pageBook__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,7 +61,7 @@
       align-content: flex-start;
 }
 
-.pageSecond__article {
+.pageBook__article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,8 +73,7 @@
   display: inline-block;
 }
 
-.pageSecond__title {
-  font-style: normal;
+.pageBook__title {
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
@@ -82,8 +81,7 @@
   margin-bottom: 16px;
 }
 
-.pageSecond__text {
-  font-style: normal;
+.pageBook__text {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -97,8 +95,7 @@
   color: #000000;
 }
 
-.pageFour__subtitle {
-  font-family: 'Segoe UI';
+.pageBook__subtitle {
   font-style: normal;
   font-weight: 600;
   font-size: 18px;

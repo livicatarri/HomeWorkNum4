@@ -25,6 +25,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { FileSizePipePipe } from './file-size-pipe.pipe';
 import { LoginModule } from './login/login.module';
 
+import {MatTableModule} from '@angular/material/table';
 import { BookModule } from './book/book.module';
 //import { BookRoutingModule } from './book/book-routing.module';
 
@@ -32,7 +33,7 @@ import { BookModule } from './book/book.module';
 
 @NgModule({
   imports: [
-
+    MatTableModule,
     BrowserModule,
     FormsModule,
     AppRoutingModule,

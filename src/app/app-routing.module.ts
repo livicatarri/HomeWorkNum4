@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { routesBeautiful } from './book/book-routing.module';
+import { routesBeautiful, BookRoutingModule } from './book/book-routing.module';
 
  const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -14,7 +14,7 @@ import { routesBeautiful } from './book/book-routing.module';
  { path: 'book', 
 
  loadChildren: () =>
-  import('./book/book.module').then(m => m.BookModule)
+  import('./book/book-routing.module').then(m => m.BookRoutingModule)
 }
   
  

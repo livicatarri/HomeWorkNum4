@@ -1,8 +1,8 @@
 .pagination {
     height: 184px;
     box-sizing: border-box;
-    margin: 27px auto 24px;
-    max-width: 843px;
+    margin: 0px auto 24px;
+    //max-width: 843px;
     width: 100%;
     flex-direction: row;
     display: flex;
@@ -15,6 +15,7 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
+    
   }
   
   .pagination-list__item {
@@ -25,6 +26,7 @@
     color: black;
     width: 28px;
     height: 28px;
+    margin-right: 4px;
   }
   
   .pagination-list__item:hover {
@@ -32,17 +34,18 @@
     border-radius: 50%;
   }
   
-  .pagination-list__item_active {
+  .pagination-list__item:active {
     background-color: #8f07cf;
     border-radius: 50%;
     color: white;
   }
-  
-  .pagination-list__item:hover {
+
+    .pagination-list__item:focus {
     background-color: #8f07cf;
-    opacity: 0.7;
+    border-radius: 50%;
+    color: white;
   }
-  ul{
+ul{
 list-style-type: none;
 display: flex;
   }
