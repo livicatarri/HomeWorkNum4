@@ -27,7 +27,6 @@ import { LoginModule } from './login/login.module';
 
 import {MatTableModule} from '@angular/material/table';
 import { BookModule } from './book/book.module';
-//import { BookRoutingModule } from './book/book-routing.module';
 import {MatCardModule} from '@angular/material/card';
 
 
@@ -50,11 +49,6 @@ import {MatCardModule} from '@angular/material/card';
     LoginModule,
     BookModule,
     MatCardModule,
-    //BookRoutingModule,
-    
-    // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
-    // and returns simulated server responses.
-    // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     )

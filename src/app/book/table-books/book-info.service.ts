@@ -25,7 +25,7 @@ export class  BookInfoService {
       )
   }
   getBookIdRow(id: number): Observable<bookCard> {
-    const url = `${this.booksUrl}/set2/data/${id}`;
+    const url = `${this.booksUrl}/set1/data/${id}`;
     return this.http.get<bookCard>(url).pipe(
       tap(_ => console.log(`fetched id=${id}`)),
       catchError(this.handleError<bookCard>(`getBookIdRow id=${id}`))
