@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
-import { bookInfo } from '../booksInterface';
-import { BookInfoService } from '../book-info.service';
+import { bookInfo } from './booksInterface';
+import { BookInfoService } from './book-info.service';
 
 
 @Component({
