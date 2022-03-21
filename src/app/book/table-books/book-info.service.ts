@@ -24,7 +24,7 @@ export class  BookInfoService {
         this.http.get<bookInfo[]>(this.urlEdit).pipe()
       ).pipe(
         tap(_ => console.log('fetched set data of books')),
-        catchError(this.handleError<bookInfo[]>('getSets', []))
+        catchError(this.handleError<bookInfo[]>('get', []))
       )
   }
 
