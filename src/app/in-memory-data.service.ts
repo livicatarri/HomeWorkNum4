@@ -22,7 +22,7 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 20, name: 'Tornado' }
     ];
     
-    const booksDB = {"set1": 
+    const booksDB = [{"set1": 
     {
     "data": [    {
         "title": "Harry Potter and the Order of the Phoenix",
@@ -60,15 +60,12 @@ export class InMemoryDataService implements InMemoryDbService {
       "data": [{"id": 1, "releaseDate": "2011-01-02", "qtyRelease": 500},{"id": 2, "releaseDate": "2011-01-03", "qtyRelease": 7500},{"id": 3, "releaseDate": "2011-06-03", "qtyRelease": 9700},{"id": 4, "releaseDate": "2011-07-22", "qtyRelease": 380},{"id": 5, "releaseDate": "2011-06-22", "qtyRelease": 90000},{"id": 6, "releaseDate": "2011-03-22", "qtyRelease": 3805}]
     }
   }
+    ]
+    const bookCard: bookCard[] = booksDB[0].set1.data;
+    const bookEdit: bookEdit[] = booksDB[0].set2.data;
 
-    const bookCard: bookCard[] = booksDB.set1.data;
-    
-    const bookEdit: bookEdit[] = booksDB.set2.data;
     return {heroes, bookCard, bookEdit};
-  
   }
-
-
 
   genId(heroes: Hero[]): number {
     return heroes.length > 0 ? Math.max(...heroes.map(hero => hero.id)) + 1 : 11;

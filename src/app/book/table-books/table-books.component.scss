@@ -1,0 +1,27 @@
+.mat-elevation-z8{
+    box-shadow: none;
+  }
+.table__container {
+    max-width: 840px;
+    margin: 40px auto;
+  }
+  
+  .detail-row {
+    height: 0;
+  }
+  
+  .element-row:not(.expanded-row):hover {
+    background: rgb(109, 2, 109);
+  }
+  
+  .element-row:not(.expanded-row):active {
+    background: #720563;
+  }
+  
+  .element-row  {
+    border-bottom-width: 0;
+  }
+  
+  .element-detail {
+    overflow: hidden;
+  }

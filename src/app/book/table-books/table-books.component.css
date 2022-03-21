@@ -1,0 +1,30 @@
+.mat-elevation-z8 {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.table__container {
+  max-width: 840px;
+  margin: 40px auto;
+}
+
+.detail-row {
+  height: 0;
+}
+
+.element-row:not(.expanded-row):hover {
+  background: #6d026d;
+}
+
+.element-row:not(.expanded-row):active {
+  background: #720563;
+}
+
+.element-row {
+  border-bottom-width: 0;
+}
+
+.element-detail {
+  overflow: hidden;
+}
+/*# sourceMappingURL=table-books.component.css.map */
