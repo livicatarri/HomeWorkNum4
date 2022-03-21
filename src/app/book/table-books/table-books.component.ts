@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
-import { bookInfo } from './booksInterface';
+import { bookInfo, bookCard, bookEdit } from './booksInterface';
 import { BookInfoService } from './book-info.service';
 
 
@@ -11,6 +11,8 @@ import { BookInfoService } from './book-info.service';
 })
 
 export class TableBooksComponent implements OnInit {
+  BookCard: bookCard[]=[];
+  BookEdit: bookEdit[]=[];
   BookInfoPage: bookInfo[] = [];
   displayedColumns: string[] = ['id', 'title', 'qtyRelease'];
   dataSource = this.BookInfoPage;
@@ -21,32 +23,18 @@ export class TableBooksComponent implements OnInit {
 
   getBooksReg(): void {
     this.bookService.getBooksReg().pipe(
-      map(books => {
-        const setDescr = books.set1.data;
-        const setEdit = books.set2.data;
-        return ({setDescr, setEdit});
-      }),
-      map(({setDescr, setEdit}) => {
-
-        const BookInfoPage: bookInfo[] = []
-        for (let i = 0; i < setDescr.length; i++) {
-          if (setDescr[i].id===setEdit[i].id){
-          BookInfoPage[i] = {
-            id: setDescr[i].id,
-            title: setDescr[i].title,
-            description: setDescr[i].description,
-            releaseDate: setEdit[i].releaseDate,
-            qtyRelease: setEdit[i].qtyRelease
-          }
-        }
-      }
-        return  BookInfoPage;
-      
-      })
-    ).subscribe(books => this.BookInfoPage = books)
+      ).subscribe(books => this.BookEdit = books)
+    
   }
+  
+  getBookIdRow():void {
+    this.bookService.getBookIdRow().pipe(
+      ).subscribe(books => this.BookCard = books)
+  }
+  
+
   getTotalCount(): number {
-    return this.BookInfoPage.map(book => book.qtyRelease).reduce(( temp, value) => {
+    return this.BookEdit.map(book => book.qtyRelease).reduce(( temp, value) => {
       return   temp + value;
     }, 0)
   }

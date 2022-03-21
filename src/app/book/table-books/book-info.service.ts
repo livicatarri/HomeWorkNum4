@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
-import {  bookCard, BooksAllData } from './booksInterface';
+import {  bookCard, bookInfo, bookEdit } from './booksInterface';
 
 @Injectable({
   providedIn: 'root'
@@ -17,20 +17,24 @@ export class  BookInfoService {
   }
 
   constructor(private http: HttpClient) { }// делала как в туториале 6 часть 
+  urlBook: string = 'api/bookEdit';
+  urlCard: string = 'api/bookCard';
 
-  getBooksReg(): Observable<BooksAllData> {
-    return this.http.get<BooksAllData>(this.booksUrl)
-      .pipe(
-        tap(_ => console.log('fetched book')),
-      )
-  }
-  getBookIdRow(id: number): Observable<bookCard> {
-    const url = `${this.booksUrl}/set1/data/${id}`;
-    return this.http.get<bookCard>(url).pipe(
-      tap(_ => console.log(`fetched id=${id}`)),
-      catchError(this.handleError<bookCard>(`getBookIdRow id=${id}`))
-    )
- }
+  
+getBookIdRow(): Observable<bookCard[]> {
+  return this.http.get<bookCard[]>(this.urlCard).pipe(
+      tap(_ => console.log('fetched second set data of books')),
+      catchError(this.handleError<bookCard[]>('getSetOne', []))
+  )
+}
+getBooksReg(): Observable<bookEdit[]> {
+  return this.http.get<bookEdit[]>(this.urlBook).pipe(
+      tap(_ => console.log('fetched first set data of books')),
+      catchError(this.handleError<bookEdit[]>('getSetTwo', []))
+  )
+}
+
+
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error);

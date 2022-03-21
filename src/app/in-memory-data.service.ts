@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Hero } from './hero';
+import { bookInfo, bookCard, bookEdit } from './book/table-books/booksInterface';
 
 
 @Injectable({
@@ -20,6 +21,7 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 19, name: 'Magma' },
       { id: 20, name: 'Tornado' }
     ];
+    
     const booksDB = {"set1": 
     {
     "data": [    {
@@ -57,10 +59,17 @@ export class InMemoryDataService implements InMemoryDbService {
     "set2": {
       "data": [{"id": 1, "releaseDate": "2011-01-02", "qtyRelease": 500},{"id": 2, "releaseDate": "2011-01-03", "qtyRelease": 7500},{"id": 3, "releaseDate": "2011-06-03", "qtyRelease": 9700},{"id": 4, "releaseDate": "2011-07-22", "qtyRelease": 380},{"id": 5, "releaseDate": "2011-06-22", "qtyRelease": 90000},{"id": 6, "releaseDate": "2011-03-22", "qtyRelease": 3805}]
     }
-  
-  };
-    return {heroes, booksDB};
   }
+   // const bookInfo: bookInfo[] = booksDB.set2.data.map(a => Object.assign(a, booksDB.set1.data.find(b => b.id == a.id)));
+
+    const bookCard: bookCard[] = booksDB.set1.data;
+    
+    const bookEdit: bookEdit[] = booksDB.set2.data;
+    return {heroes, bookCard, bookEdit};
+  
+  }
+
+
 
   genId(heroes: Hero[]): number {
     return heroes.length > 0 ? Math.max(...heroes.map(hero => hero.id)) + 1 : 11;
