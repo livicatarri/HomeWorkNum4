@@ -28,6 +28,10 @@ import { LoginModule } from './login/login.module';
 import {MatTableModule} from '@angular/material/table';
 import { BookModule } from './book/book.module';
 import {MatCardModule} from '@angular/material/card';
+import { HelloDirective } from './directives/hello.directive';
+import { TextModificatorDirective } from './directives/text-modificator.directive';
+import { TextModificatorHostDirective } from './directives/text-modificator-host.directive';
+import { RainbowTextDirective } from './directives/rainbow-text.directive';
 
 
 
@@ -60,7 +64,11 @@ import {MatCardModule} from '@angular/material/card';
     HeroDetailComponent,
     MessagesComponent,
     HeroSearchComponent,
-    FileSizePipePipe,    
+    FileSizePipePipe,
+    HelloDirective,
+    TextModificatorDirective,
+    TextModificatorHostDirective,
+    RainbowTextDirective,    
   ],
   bootstrap: [ AppComponent ]
 })
