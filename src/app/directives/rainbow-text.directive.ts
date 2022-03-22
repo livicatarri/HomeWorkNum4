@@ -10,7 +10,6 @@ export class RainbowTextDirective {
   constructor(private el: ElementRef) {
     
   }
-
   onMouseEnter() {
     this.el.nativeElement.classList.add('rainbow');
   }
@@ -18,7 +17,6 @@ export class RainbowTextDirective {
   onMouseLeave() {
     this.el.nativeElement.classList.remove('rainbow')
   }
-
   }
 
 
