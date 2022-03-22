@@ -1,7 +1,10 @@
 import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
-  selector: '[appHello]'
+  selector: '[appHello]',
+  host:{
+    '(mouseenter)': 'onMouseEnter()',
+    '(mouseleave)': 'onMouseLeave()'}
 })
 export class HelloDirective {
 
