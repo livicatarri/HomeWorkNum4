@@ -13,7 +13,7 @@ import {COMMA, ENTER} from '@angular/cdk/keycodes';
 })
 export class FormComponentComponent {
   formComponent: FormGroup
-  displayInfo: boolean = false
+  displayInfoTable: boolean = false
 
   constructor(private fb: FormBuilder) {
 
@@ -33,7 +33,7 @@ export class FormComponentComponent {
   addOnBlur = true;
   readonly separatorKeysCodes = [ENTER, COMMA] as const;
   skills: any = [{name: 'Жизнерадостность'}, {name: 'Заинтересованность'}, {name: 'Интеллект'}];
-  
+
   add(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
     if (value) {
@@ -56,10 +56,10 @@ export class FormComponentComponent {
     return result;
   }
   onSubmit() {
-    this.displayInfo = true
+    this.displayInfoTable = true
   }
   onClear() {
-    this.displayInfo = false
+    this.displayInfoTable = false
     this.formComponent.reset()
   }
 
