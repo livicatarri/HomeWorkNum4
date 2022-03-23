@@ -24,6 +24,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatButtonModule} from '@angular/material/button';
 import { FileSizePipePipe } from './file-size-pipe.pipe';
 import { LoginModule } from './login/login.module';
+import {MatChipsModule} from '@angular/material/chips';
 
 import {MatTableModule} from '@angular/material/table';
 import { BookModule } from './book/book.module';
@@ -32,6 +33,9 @@ import { HelloDirective } from './directives/hello.directive';
 import { TextModificatorDirective } from './directives/text-modificator.directive';
 import { TextModificatorHostDirective } from './directives/text-modificator-host.directive';
 import { RainbowTextDirective } from './directives/rainbow-text.directive';
+import { FormComponentComponent } from './form-component/form-component.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 
 
@@ -53,6 +57,9 @@ import { RainbowTextDirective } from './directives/rainbow-text.directive';
     LoginModule,
     BookModule,
     MatCardModule,
+    MatChipsModule,
+    MatIconModule,
+    MatAutocompleteModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     )
@@ -68,7 +75,8 @@ import { RainbowTextDirective } from './directives/rainbow-text.directive';
     HelloDirective,
     TextModificatorDirective,
     TextModificatorHostDirective,
-    RainbowTextDirective,    
+    RainbowTextDirective,
+    FormComponentComponent,    
   ],
   bootstrap: [ AppComponent ]
 })

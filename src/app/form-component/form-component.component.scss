@@ -1,0 +1,64 @@
+.FormComponent__Wrapper{
+      display: flex;
+      flex-direction: column;
+     
+}
+  form {
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    border-radius: 5%;
+    background-color: #6e2aad ;
+    padding: 30px;
+    color: white;
+  }
+  input {
+    width: 300px;
+    height: 35px;
+    border-radius: 3px;
+  }
+  .example-chip-list {
+    width: 100%;
+  }
+  button {
+    margin: 10px 10px;
+    background-color: #8a2be2;
+    border: 4px dotted #6f1abd;
+    color: #fff5ee;
+    width: 100px;
+    height: 45px;
+    border-radius: 3px;
+    font-size: 20px;
+  }
+  .mat-chip.mat-standard-chip{
+      background-color: #6e2aad;
+  }
+
+  label{
+    margin: 10px;
+  }
+
+  button:hover {
+    background-color: #310062;
+  }
+  
+  .error {
+    color: white;
+    margin: 10px 0;
+  }
+  
+  .info {
+    width: 400px;
+    margin: 20px auto;
+  }
+  
+  .example-chip-list {
+    margin-top: 20px;
+  }
+  .FormComponent__btns{
+      display: flex;
+      justify-content: space-between;
+  }
