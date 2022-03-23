@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener, Input } from '@angular/core';
+import { Directive, ElementRef,  Input } from '@angular/core';
 
 @Directive({
   selector: '[appTextModificatorHost]',
@@ -9,7 +9,7 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 export class TextModificatorHostDirective {
  
     @Input() BackColorHost = 'yellow';
-    @Input() MyTextHost = "IN ewkfmrew";
+    @Input() TextEnterHost = "IN ewkfmrew";
   
     innerText: string= '';
     constructor(private el: ElementRef) {
@@ -18,16 +18,14 @@ export class TextModificatorHostDirective {
   
    onMouseEnter() {
       this.innerText = this.el.nativeElement.innerHTML;
-      this.textModificator(this.BackColorHost, this.MyTextHost);
+      this.textModificator(this.BackColorHost, this.TextEnterHost);
     }
-  
    onMouseLeave() {
-      this.textModificator('#fff', '');
+      this.textModificator('white', '');
     }
-  
-    private textModificator(BackColorHost: string, MyTextHost: string) {
+    private textModificator(BackColorHost: string, TextEnterHost: string) {
       this.el.nativeElement.style.backgroundColor = BackColorHost;
-      this.el.nativeElement.innerHTML =  this.innerText + ' ' + MyTextHost;
+      this.el.nativeElement.innerHTML =  this.innerText + ' ' + TextEnterHost;
     }
   }
   

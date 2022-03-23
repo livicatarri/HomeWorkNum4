@@ -1,7 +1,7 @@
 <div id="search-component">
-  <h2 appTextModificatorHost [BackColorHost] ="'purple'" [MyTextHost] ="'С днем рождения!'">HomeWork</h2>
+  <h2 appTextModificatorHost [BackColorHost] ="'purple'" [TextEnterHost] ="'С днем рождения!'">HomeWork</h2>
   <h2 appRainbowText>HOME</h2>
-  <label for="search-box" appTextModificator [BackColor] ="'green'" [MyText] ="'Когда пытылась перенастроить проект:столько боли и неопределенности, буду создавать заново скоро и пробовать перекидывать свое творчество туда'"  >Hero Search</label>
+  <label for="search-box" appTextModificator [BackColor] ="'green'" [TextMouseEnter] ="'Когда пытылась перенастроить проект:столько боли и неопределенности, буду создавать заново скоро и пробовать перекидывать свое творчество туда'"  >Hero Search</label>
   <input #searchBox id="search-box" (input)="search(searchBox.value) " />
 
   <ul class="search-result">
