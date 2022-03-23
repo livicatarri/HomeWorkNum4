@@ -1,36 +1,36 @@
 .FormComponent__Wrapper{
       display: flex;
       flex-direction: column;
-     
+     margin-left:20px;
 }
-  form {
+.FormComponent {
     margin: 50px auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
+   // justify-content: center;
+    //align-items: center;
     flex-direction: column;
-    width: 400px;
+    width: 460px;
     border-radius: 5%;
     background-color: #6e2aad ;
     padding: 30px;
     color: white;
   }
-  input {
+  .FormComponent__input{
     width: 300px;
     height: 35px;
-    border-radius: 3px;
+    border-radius: 4px;
   }
   .example-chip-list {
     width: 100%;
   }
-  button {
-    margin: 10px 10px;
+  .FormComponent__btn {
+    margin: 8px 8px;
     background-color: #8a2be2;
     border: 4px dotted #6f1abd;
     color: #fff5ee;
     width: 100px;
     height: 45px;
-    border-radius: 3px;
+    border-radius: 4px;
     font-size: 20px;
   }
   .mat-chip.mat-standard-chip{
@@ -38,10 +38,10 @@
   }
 
   label{
-    margin: 10px;
+    margin: 8px;
   }
 
-  button:hover {
+  .FormComponent__btn:hover {
     background-color: #310062;
   }
   
@@ -50,8 +50,8 @@
     margin: 10px 0;
   }
   
-  .info {
-    width: 400px;
+  .displayInfoTable {
+    width: 200px;
     margin: 20px auto;
   }
   
@@ -60,5 +60,5 @@
   }
   .FormComponent__btns{
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
   }

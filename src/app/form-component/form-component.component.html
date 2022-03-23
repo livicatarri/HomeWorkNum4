@@ -1,16 +1,16 @@
- <form [formGroup]="formComponent" class="form" (submit)="onSubmit()">
+ <form [formGroup]="formComponent" class="FormComponent" (submit)="onSubmit()">
 <div class="FormComponent__container">
     <div class="FormComponent__Wrapper">
             <label for id="firstname">Имя</label>
-            <input  formControlName="firstName" required>
+            <input  class="FormComponent__input" formControlName="firstName" required>
             <div class="error" *ngIf="isControlInvalid('firstName')">Ввод должен быть на кириллице</div>
             <label for id="lastname">Фамилия</label>
-          <input  formControlName="lastName" required>
+          <input  class="FormComponent__input"  formControlName="lastName" required>
           <div class="error" *ngIf="isControlInvalid('lastName')">Ввод должен быть на кириллице</div>
           <label for id="middleName">Отчество</label>
-          <input  formControlName="middleName">
+          <input  class="FormComponent__input" formControlName="middleName">
           <label  for id="email">Email</label>
-          <input  placeholder="....@mail..." formControlName="email" >
+          <input  class="FormComponent__input" placeholder="....@mail..." formControlName="email" >
         </div>
         <mat-form-field formArrayName="AllSkills" class="example-chip-list" appearance="fill">
           <mat-label>Навыки</mat-label>
@@ -23,8 +23,8 @@
           </mat-chip-list>
         </mat-form-field>
         <div class="FormComponent__btns">
-        <button   (click)="onSubmit()" [disabled]="!formComponent.valid" >Submit</button>
-        <button  (click)="onClear()" >Clear</button>
+        <button class="FormComponent__btn"  (click)="onSubmit()" [disabled]="!formComponent.valid" >Submit</button>
+        <button class="FormComponent__btn" (click)="onClear()" >Clear</button>
         </div>
       <div *ngIf="displayInfoTable" >
         {{ formComponent.value | json }} 
