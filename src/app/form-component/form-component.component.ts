@@ -22,7 +22,11 @@ export class FormComponentComponent {
       firstName: ['', [Validators.required, Validators.pattern(/[А-я]/)]],
       middleName: ['', [Validators.pattern(/[А-я]/)]],
       email: ['', [Validators.email]],
-      AllSkills: this.fb.array([])
+      AllSkills: this.fb.array([
+          this.fb.control('жизнерадостность'),
+          this.fb.control('радостность'),
+          this.fb.control('интеллект')
+      ])
     })
   }
 
@@ -62,6 +66,7 @@ export class FormComponentComponent {
     this.displayInfoTable = false
     this.formComponent.reset()
   }
-
 }
+
+
   
