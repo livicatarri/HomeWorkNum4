@@ -1,34 +1,33 @@
- <form [formGroup]="formComponent" class="FormComponent" (submit)="onSubmit()">
-<div class="FormComponent__container">
-    <div class="FormComponent__Wrapper">
-            <label for id="firstname">Имя</label>
-            <input  class="FormComponent__input" formControlName="firstName" required>
-            <div class="error" *ngIf="isControlInvalid('firstName')">Ввод должен быть на кириллице</div>
-            <label for id="lastname">Фамилия</label>
-          <input  class="FormComponent__input"  formControlName="lastName" required>
-          <div class="error" *ngIf="isControlInvalid('lastName')">Ввод должен быть на кириллице</div>
-          <label for id="middleName">Отчество</label>
-          <input  class="FormComponent__input" formControlName="middleName">
-          <label  for id="email">Email</label>
-          <input  class="FormComponent__input" placeholder="....@mail..." formControlName="email" >
+<form [formGroup]="formComponent" class="FormComponent" (submit)="onSubmit()">
+  <div class="FormComponent__container">
+      <div class="FormComponent__Wrapper">
+              <label for id="firstname">Имя</label>
+              <input  class="FormComponent__input" formControlName="firstName" required>
+              <div class="error" *ngIf="isControlInvalid('firstName')">Ввод должен быть на кириллице</div>
+              <label for id="lastname">Фамилия</label>
+            <input  class="FormComponent__input"  formControlName="lastName" required>
+            <div class="error" *ngIf="isControlInvalid('lastName')">Ввод должен быть на кириллице</div>
+            <label for id="middleName">Отчество</label>
+            <input  class="FormComponent__input" formControlName="middleName">
+            <label  for id="email">Email</label>
+            <input  class="FormComponent__input" placeholder="....@mail..." formControlName="email" >
+          </div>
+          <mat-form-field formArrayName="AllSkills" class="example-chip-list" appearance="fill">
+            <mat-label>Навыки</mat-label>
+            <mat-chip-list #chipList aria-label="Skills selection">
+              <mat-chip *ngFor="let skill of skills" (removed)="remove(skill)">
+                {{skill.name}}
+                <button matChipRemove> <mat-icon> cancel</mat-icon></button></mat-chip>
+              <input placeholder="Введите навык" [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"[matChipInputAddOnBlur]="addOnBlur"
+                    (matChipInputTokenEnd)="add($event)">
+            </mat-chip-list>
+          </mat-form-field>
+          <div class="FormComponent__btns">
+          <button class="FormComponent__btn"  (click)="onSubmit()" [disabled]="!formComponent.valid" >Submit</button>
+          <button class="FormComponent__btn" (click)="onClear()" >Clear</button>
+          </div>
+        <div *ngIf="displayInfoTable" >
+          {{ formComponent.value | json }} 
         </div>
-        <mat-form-field formArrayName="AllSkills" class="example-chip-list" appearance="fill">
-          <mat-label>Навыки</mat-label>
-          <mat-chip-list #chipList aria-label="Skills selection">
-            <mat-chip *ngFor="let skill of skills" (removed)="remove(skill)">
-              {{skill.name}}
-              <button matChipRemove> <mat-icon> cancel</mat-icon></button></mat-chip>
-            <input placeholder="Введите навык" [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"[matChipInputAddOnBlur]="addOnBlur"
-                  (matChipInputTokenEnd)="add($event)">
-          </mat-chip-list>
-        </mat-form-field>
-        <div class="FormComponent__btns">
-        <button class="FormComponent__btn"  (click)="onSubmit()" [disabled]="!formComponent.valid" >Submit</button>
-        <button class="FormComponent__btn" (click)="onClear()" >Clear</button>
-        </div>
-      <div *ngIf="displayInfoTable" >
-        {{ formComponent.value | json }} 
       </div>
-    </div>
-  </form>
-
+    </form>
