@@ -64,7 +64,8 @@ export class FormComponentComponent {
     this.displayInfoTable = false
     this.formComponent.reset()
     this.AllSkills.patchValue(this.skillsMap)
-    this.AllSkills.controls.splice(3,)
+    this.AllSkills.controls.splice(3)
+    this.AllSkills.value.splice(3)
   }
 }
 
