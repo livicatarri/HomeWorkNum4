@@ -15,8 +15,8 @@
           <mat-form-field formArrayName="AllSkills" class="example-chip-list" appearance="fill">
             <mat-label>Навыки</mat-label>
             <mat-chip-list #chipList aria-label="Skills selection">
-              <mat-chip *ngFor="let skill of skills" (removed)="remove(skill)">
-                {{skill.name}}
+              <mat-chip *ngFor="let skill of AllSkills.value; let inDEX=index" (removed)="remove(inDEX)">
+                {{skill}}
                 <button matChipRemove> <mat-icon> cancel</mat-icon></button></mat-chip>
               <input placeholder="Введите навык" [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"[matChipInputAddOnBlur]="addOnBlur"
                     (matChipInputTokenEnd)="add($event)">

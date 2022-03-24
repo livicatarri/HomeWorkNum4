@@ -22,11 +22,9 @@ export class FormComponentComponent {
       firstName: ['', [Validators.required, Validators.pattern(/[А-я]/)]],
       middleName: ['', [Validators.pattern(/[А-я]/)]],
       email: ['', [Validators.email]],
-      AllSkills: this.fb.array([
-          this.fb.control('жизнерадостность'),
-          this.fb.control('радостность'),
-          this.fb.control('интеллект')
-      ])
+      AllSkills: this.fb.array(
+        this.skillsMap.map(element => fb.control(element))
+      )
     })
   }
 
@@ -36,19 +34,23 @@ export class FormComponentComponent {
 
   addOnBlur = true;
   readonly separatorKeysCodes = [ENTER, COMMA] as const;
-  skills: any = [{name: 'Жизнерадостность'}, {name: 'Заинтересованность'}, {name: 'Интеллект'}];
+   skills: Array<any> = [{name: 'Жизнерадостность'}, {name: 'Заинтересованность'}, {name: 'Интеллект'}];
+   readonly skillsMap: string[]= this.skills.map(element => element.name)
 
   add(event: MatChipInputEvent): void {
-    const value = (event.value || '').trim();
+    const value = event.value.trim() || ''
+    if (value) {
+      
+      this.AllSkills.push(this.fb.control(value))
+    }
     event.chipInput!.clear();
   }
-  remove(skill: any): void {
-    const index = this.skills.indexOf(skill);
+  remove(index: any): void {
     if (index >= 0) {
-      this.skills.splice(index, 1);
       this.AllSkills.removeAt(index);
     }
   }
+  
   ngOnInit() {}
   isControlInvalid(controlName: string): boolean {
     const control = this.formComponent.controls[controlName]
@@ -61,6 +63,8 @@ export class FormComponentComponent {
   onClear() {
     this.displayInfoTable = false
     this.formComponent.reset()
+    this.AllSkills.patchValue(this.skillsMap)
+    this.AllSkills.controls.splice(3,)
   }
 }
 
