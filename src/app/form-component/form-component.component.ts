@@ -40,10 +40,6 @@ export class FormComponentComponent {
 
   add(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
-    if (value) {
-      this.AllSkills.push(this.fb.control(`${event.value}`))
-      this.skills.push({name: value});
-    }
     event.chipInput!.clear();
   }
   remove(skill: any): void {
@@ -68,5 +64,3 @@ export class FormComponentComponent {
   }
 }
 
-
-  
