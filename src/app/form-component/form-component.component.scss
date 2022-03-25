@@ -1,13 +1,11 @@
 .FormComponent__Wrapper{
       display: flex;
       flex-direction: column;
-     margin-left:20px;
+     align-items: center;
 }
 .FormComponent {
     margin: 50px auto;
     display: flex;
-   // justify-content: center;
-    //align-items: center;
     flex-direction: column;
     width: 460px;
     border-radius: 5%;
@@ -44,7 +42,10 @@
   .FormComponent__btn:hover {
     background-color: #310062;
   }
-  
+  .example-chip-list{
+    width: 310px;
+    margin-left:75px;
+  }
   .error {
     color: white;
     margin: 10px 0;
